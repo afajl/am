@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Anna Mattsson - {{ template "title" . }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/site.css"/>
+    <script type="text/javascript" src="/js/site.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <div id="logo"></div>
+      <h1 class="siteTitle linkPlain">PHOTOGRAPHER ANNA MATTSSON</h1>
+    </a>
+    <nav>
+      <ul>
+        <li><a class="linkNav {{if eq .Name "Start" }}linkNavActive{{end}}" 
+               href="/">PORTFOLIO</a></li>
+        <li><a class="linkNav {{if eq .Name "Advertising" }}linkNavActive{{end}}" 
+               href="/advertising.html">ADVERTISING</a></li>
+        <li><a class="linkNav {{if eq .Name "Portraits" }}linkNavActive{{end}}" 
+                href="/portraits.html">PORTRAITS</a></li>
+        <li><a class="linkNav {{if eq .Name "Info" }}linkNavActive{{end}}" 
+                href="/info.html">INFO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="content">
+    {{ template "content" . }}
+  </section>
+
+  <footer id="sitefooter">
+    <a class="linkPlain" href="tel:"></a> 
+   | <a class="linkPlain" href="mailto:"></a>   
+  </footer>
+
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+</html>   
